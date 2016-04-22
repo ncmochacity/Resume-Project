@@ -2,34 +2,56 @@
 <head>
   
   <meta charset="utf-8">
-  <title>Resume</title>
-
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+  <meta name="description" content="This is the Udacity Nanodegree portfolio of Nicki Chen, a UI developer and Front-end developer based in Dallas,TX">
+  <meta name="keywords" content="Nicki Chen,webdesign,webdesigner,web designer, UX,UI,deign,front-end development">
+  <meta name="author" content="Nicki Chen">
+  <title>Introduction | Nicki Chen's Online Resume</title>
   <!-- Load the page styles. -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,100,300,700" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800' rel='stylesheet' type='text/css'>
+  <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet" type="text/css">
-
-  <!--While HTML is a static document, the browser converts HTML to the
-  DOM and the DOM can change. In fact, JavaScript's power comes from
-  its ability to manipulate the DOM, which is essentially a JavaScript
-  object. When JavaScript makes something interesting happen on a
-  website, it's likely the action happened because JavaScript changed
-  the DOM. jQuery is fast and easy to use, but it doesn't do anything
-  you can't accomplish with vanilla (regular) JavaScript.
-  -->
-  <script src="js/jQuery.js"></script>
-  <script src="js/helper.js"></script>
-  <script type="text/javascript" src="https://maps.googleapis/js?libraries=places"></script>
+  <script src="https://use.typekit.net/qcj5mus.js"></script>
   <meta name="viewport" content="width=device-width">
 </head>
 <body unresolved>
+  <header class="page-header" role="banner">
+    <div class="inner">
+      <nav class="primary-nav" role="navigation">
+        <ul class="text-uppercase nav-list">
+          <li class="nav-link"><a href="#header">About</a></li>
+          <li class="nav-link"><a href="#education">Education</a></li>
+          <li class="nav-link"><a href="#workExperience">Work</a></li>
+          <li class="nav-link"><a href="#projects">Projects</a></li>
+          <li class="nav-link"><a href="#letsConnect">Contact</a></li>        
+          <li class="nav-link"><a href="#mapDiv">Map</a></li>
+        </ul>
+
+      </nav>
+      <a id="menu" href="#">
+        <span class="before"></span>
+        <span class="after"></span>
+      </a>
+    </div>
+  </header>
+  
   <div id="main">
     <div id="header" class="center-content clearfix">
       <ul id="topContacts" class='flex-box'></ul>
+    </div>
+    <div id="skills-display" class="text-center">
+      <h2 class="text-uppercase">Skills</h2>
+      <div class="skills-view"></div>
+      <canvas id="my-chart" width="400" height="400" ></canvas>
     </div>
     <div style='clear: both;'></div>
     <div id="workExperience" class='gray'>
       <h2>Work Experience</h2>
     </div>
-    <div id="projects">
+    <div id="projects" class="col-md-12">
       <h2>Projects</h2>
     </div>
     <div id="education" class='gray'>
@@ -39,12 +61,19 @@
       <h2>Where I've Lived and Worked</h2>
     </div>
     <div id="letsConnect" class='dark-gray'>
-      <h2 class='orange center-text'>Let's Connect</h2>
+      <h2 class=' center-text text-uppercase'>Contact</h2>
         <ul id="footerContacts" class="flex-box">
         </ul>
     </div>
   </div>
+
+  <script src="js/jQuery.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="js/Chart.js"></script>
+  <script src="js/helper-backup.js"></script>
   <script src="js/resumeBuilder.js"></script>
+  <script src="js/main.js"></script>
+  <script src="http://maps.googleapis.com/maps/api/js?&libraries=places&callback=initializeMap"></script>
   <script type="text/javascript">
     if(document.getElementsByClassName('flex-item').length === 0) {
       document.getElementById('topContacts').style.display = 'none';

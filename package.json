@@ -1,0 +1,33 @@
+{
+  "name": "resume",
+  "version": "1.0.0",
+  "description": "## How do I complete this project?",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ncmochacity/Resume-Project.git"
+  },
+  "author": "nicki chen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ncmochacity/Resume-Project/issues"
+  },
+  "homepage": "https://github.com/ncmochacity/Resume-Project#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "^1.0.1",
+    "grunt-responsive-images": "^0.1.7"
+  },
+  "dependencies": {
+    "grunt": "^1.0.1"
+  },
+  "keywords": [
+    "online",
+    "resume"
+  ]
+}

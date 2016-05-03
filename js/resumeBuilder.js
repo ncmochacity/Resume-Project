@@ -93,16 +93,20 @@ var education = {
 
 }
 education.display = function() {
-    for (var item in education.schools) {
-        var formattedName = HTMLschoolName.replace("%data%", education.schools[item].name);
-            formattedName=formattedName.replace("%title%",education.schools[item].name);
-        $("#education").append(HTMLschoolStart);
-        var formattedDegree = HTMLschoolDegree.replace("%data%", education.schools[item].degree);
-        var formattedDates = HTMLschoolDates.replace("%month%", education.schools[item].month);
-            formattedDates=formattedDates.replace("%year%",education.schools[item].year);
-        var formattedMajors = HTMLschoolMajor.replace("%data%", education.schools[item].majors);
-        var formattedLocation = HTMLschoolLocation.replace("%data%", education.schools[item].location);
-        $(".education-entry:last").append(formattedName, formattedDegree, formattedDates, formattedMajors, formattedLocation);
+	if(education.schools.length>0) {
+		
+	    for (var item in education.schools) {
+	    	$("#education").append(HTMLschool);
+	    	$("#education").append(HTMLschoolStart);
+	        var formattedName = HTMLschoolName.replace("%data%", education.schools[item].name);
+	            formattedName=formattedName.replace("%title%",education.schools[item].name);
+	        var formattedDegree = HTMLschoolDegree.replace("%data%", education.schools[item].degree);
+	        var formattedDates = HTMLschoolDates.replace("%month%", education.schools[item].month);
+	            formattedDates=formattedDates.replace("%year%",education.schools[item].year);
+	        var formattedMajors = HTMLschoolMajor.replace("%data%", education.schools[item].majors);
+	        var formattedLocation = HTMLschoolLocation.replace("%data%", education.schools[item].location);
+	        $(".education-entry:last").append(formattedName, formattedDegree, formattedDates, formattedMajors, formattedLocation);
+	    }
     }
     if(education.onlineCourses.length > 0){
     	$("#education").append(HTMLonlineClasses);
@@ -267,36 +271,43 @@ function inName(name) {
 var pieData=[
 	{
 		value:7,
-		color:"#F7464A",
-		highlight:"#FF5A5E",
+		color:"#ff9987",
+		highlight:"#f62e32",
 		label:"HTML",
 		labelcolor:"red"
 	},
 	{
 		value:9,
-		color:"#6ed3cf",
-		highlight:"#5AD3D1",
+		color:"rgba(117, 230, 209, 0.98)",
+		highlight:"rgb(52,218,187)",
 		label:"CSS",
 		labelcolor:"green"
 	},
 	{
 		value:6,
-		color:"#fae596",
-		highlight:"#FFC870",
+		color:"#47DCF7",
+		highlight:"#3be2ff",
 		label:"WordPress",
-		labelcolor:"yellow"
+		labelcolor:"light blue"
 
 	},
 	{
+		value:6,
+		color:"#9068be",
+		highlight:"#9068be",
+		label:"jQuery",
+		labelcolor:"purple"
+	},
+	{
 		value:5,
-		color:"#c2cfa3",
-		highlight:"#A8B3C5",
+		color:"#e1d8c9 ",
+		highlight:"#cfc0a8",
 		label:"Git",
 		labelcolor:"dark green"
 	},
 	{
 		value:5,
-		color:"#FDB45C",
+		color:"#ffd587",
 		highlight:"#FFC870",
 		label:"Javascript",
 		labelcolor:"orange"

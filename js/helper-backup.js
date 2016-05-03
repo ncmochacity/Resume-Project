@@ -13,16 +13,16 @@ These are HTML strings. As part of the course, you'll be using JavaScript functi
 replace the %data% placeholder text you see in them.
 */
 var HTMLheaderName = '<h1 id="name" class="text-center text-uppercase">%data%</h1>';
-var HTMLheaderRole = '<br><span class="role text-center text-uppercase">%data%</span><hr/>';
+var HTMLheaderRole = '<br><span class="role text-center text-uppercase">%data%</span><span class="lnr lnr-code"></span><hr/>';
 
 var HTMLcontactGeneric = '<li class="flex-item"><span>%contact%</span><span class="text-uppercase">%data%</span></li>';
-var HTMLFacebook = '<li class="flex-item"><i class="icon-facebook icomoon-group"></i></li>';
+var HTMLFacebook = '<li class="flex-item"><a href="https://www.facebook.com/N-C-Web-Design-1374398246183996/" title="Facebook"><i class="icon-facebook icomoon-group"></i></a></li>';
 var HTMLemail = '<li class="flex-item"><span class="email"></span><span class="text-uppercase">%data%</span></li>';
-var HTMLtwitter = '<li class="flex-item"><i class="icon-twitter icomoon-group"></i></li>';
-var HTMLgithub = '<li class="flex-item"><i class="icon-github icomoon-group"></i></li>';
+var HTMLtwitter = '<li class="flex-item"><a href="https://twitter.com/nchenwebtech" title="twitter"><i class="icon-twitter icomoon-group"></i></a></li>';
+var HTMLgithub = '<li class="flex-item"><a href="https://github.com/ncmochacity" title="Github"><i class="icon-github icomoon-group"></i></a></li>';
 var HTMLblog = '<li class="flex-item"><span class="blog"></span><span>%data%</span></li>';
 var HTMLlocation = '<li class="flex-item"><span class="location"></span><span class="text-uppercase">%data%</span></li>';
-var HTMLLinkedIn='<li class="flex-item"><i class="icon-linkedin2 icomoon-group"></i></li>';
+var HTMLLinkedIn='<li class="flex-item"><a href="https://www.linkedin.com/in/nicki-chen-1b7781a7" title="LinkedIn"><i class="icon-linkedin2 icomoon-group"></i></a></li>';
 var HTMLbioPic = '<img src="%data%" class="biopic">';
 var HTMLWelcomeMsg = '<span class="welcome-message">%data%</span>';
 
@@ -30,17 +30,18 @@ var HTMLskillsStart = '<h3 id="skillsH3">Skills at a Glance:</h3><ul id="skills"
 var HTMLskills = '<li class="flex-item"><span class="white-text">%data%</span></li>';
 
 var HTMLworkStart = '<div class="work-entry col-md-4"></div>';
-var HTMLworkEmployer = '<div class="img-description work-description"><div class="clock work-clock"></div><div class="date-month text-uppercase">%month%</div><div class="date-year">%year%</div><span class="caption"><a href="%url%" class="text-uppercase title" title="%title%">%data%</a></span><div class="job text-uppercase">-%job%</div><div class="text-section">%description%</div><div class="map"></div><div class="location-text text-uppercase text-center">%location%</div></div>';
+var HTMLworkEmployer = '<div class="img-description work-description"><span class="caption"><div class="clock work-clock"></div><div class="date-month text-uppercase">%month%</div><div class="date-year">%year%</div><a href="%url%" class="text-uppercase title" title="%title%">%data%</a></span><div class="job text-uppercase">-%job%</div><div class="text-section">%description%</div><div class="map"></div><div class="location-text text-uppercase text-center">%location%</div></div>';
 var HTMLworkTitle = ' %data%</a></span></div>';
 var HTMLworkDescription = '<p class="text-section">%data%</p>';
 var HTMLworkImage='<a href="%url%" target="_blank" data-fancybox-group="work-gallery"  title="%title%" class="fancybox-thumb" rel="fancybox-thumb"><img class="img-responsive portfolio-img" alt="work images" src="%data%"></a>';
 
 var HTMLprojectStart = '<div class="project-entry col-md-4"></div>';
-var HTMLprojectTitle = '<div class="img-description"><div class="clock"></div><div class="date-month" >%month%</div><div class="date-year">%year%</div><span class="caption"><a href="%url%" target="_blank" class="text-uppercase title">%data%</a></span><p class="description">%description%</p></div>';
+var HTMLprojectTitle = '<div class="img-description"><span class="caption"><div class="clock"></div><div class="date-month" >%month%</div><div class="date-year">%year%</div><a href="%url%" target="_blank" class="text-uppercase title">%data%</a></span><p class="description">%description%</p></div>';
 var HTMLprojectImage = '<a href="%url%" target="_blank" data-fancybox-group="gallery"  title="%title%" class="fancybox-thumb" rel="fancybox-thumb"><img class="img-responsive portfolio-img" alt="portfolio pictures"src="%data%" ></a>';
 var HTMLlink='<a href="%url%" target="_blank"></a>';
 
 var HTMLschoolStart = '<div class="education-entry col-md-6"></div>';
+var HTMLschool='<div class="college text-center"><h3 class="academics text-uppercase text-center">Academics</h3></div>';
 var HTMLschoolName = '<div class="school-icon"></div><a href="#" class="school text-uppercase text-center" title="%title%">%data%</a>';
 var HTMLschoolDegree = ' <span class="degree text-uppercase">-- %data%</span>';
 var HTMLschoolDates = '<div class="date-month text-uppercase">%month%</div><div class="date-year text-uppercase">%year%</div>';

@@ -108,6 +108,11 @@ h2, h3, h4, h5 {
   position:relative;
   top:15px;
 }
+.work-description a:hover,
+#projects a:hover{
+  color:#9068be;
+}
+
 .map{
   content:url("../images/lnr-map-marker.svg");
   width:15px;
@@ -129,7 +134,9 @@ a {
   margin-top: 10px;
   display: block;
 }
-
+a:visited{
+  color:#9fa8a3;
+}
 .welcome-message {
   display:block;
   font-family:inherit;
@@ -148,7 +155,7 @@ a {
 }
 
 .orange {
-  background-color: #F5AE23;
+  background-color: #ffd587;
 }
 
 .orange-text {
@@ -179,7 +186,7 @@ a {
 }
 .role{
   font-family:"prozima-nova-extra-condensed",sans-serif;
-  color:#c5d5cb;
+  color:#58EFB9;
   display:block;
   font-weight:900;
   font-size:1.6em;
@@ -194,6 +201,12 @@ a {
   padding: 10px;
 }
 */
+.lnr-code{
+  color:#F7EDE1;
+  font-size:5em;
+  display:block;
+  text-align: center;
+}
 .center-content {
   padding-top: 2.5%;
   padding-bottom: 2.5%
@@ -202,11 +215,15 @@ a {
 .page-header{
   background-color: rgba(255,255,255);
   width:100%;
-
+  padding-bottom:0;
 }
 .page-header.sticky{
   position:fixed;
   top:0;
+  z-index:9999;
+  padding:20px;
+  padding-bottom: 0;
+  background:#fff;
 }
 
 .primary-nav{
@@ -235,7 +252,8 @@ a {
   font-weight:600;
   color:#040707;
 }
-.nav-link a:hover{
+.nav-link a:hover,
+.icomoon-group:hover{
   color:#6ed3cf;
 }
 .nav a {
@@ -302,7 +320,7 @@ ul {
 }
 /* work */
 .work{
-  background-color:#6ed3cf;
+  background-color:rgba(117, 230, 209, 0.98);
   
 }
 .work-entry .work-description{
@@ -320,7 +338,9 @@ ul {
   font-size:4em;
   text-transform: uppercase;
 }
-
+.education a:visited{
+  color:#F7EDE1;
+}
 a.title{
   font-size:1.5em;
   margin-top:-5px;
@@ -368,7 +388,6 @@ a.title{
   overflow: hidden;
 }
 .project-entry a .caption{
-  background-color:rgba(231,31,25,0.8);
   height:100%;
   width:100%;
   top:100%;
@@ -391,16 +410,16 @@ a.title{
   display:inline-block;
 }
 .img-description{
-  background:rgba(228, 196, 183, 0.92);
+  background:rgba(117, 230, 209, 0.92);
   position:absolute;
   left:20px;
   top:20px;
   right:20px;
   bottom:10px;
   padding:0;
+  z-index: 9999;
   margin:0 auto;
   display:block;
-  z-index:99999;
   transition:opacity 0.2s ease-in-out;
   -moz-transition:opacity 0.2s ease-in-out;
   -ms-transition:opacity 0.2s ease-in-out;
@@ -442,6 +461,11 @@ a.title{
   float:left;
   padding-bottom:50px;
 }
+.college{
+  position: relative;
+  top: 40px;
+  right: 27%;
+}
 .school{
   color:#4d5256;
   margin-top:50px;
@@ -467,15 +491,18 @@ a.title{
   margin-right:70px;
 }
 .online-entry{
-  background-color: #6ed3cf;
+  background-color:rgba(117, 230, 209, 0.98);
   height:100%;
   width:52%;
   float:right;
   padding-bottom:50px;
 }
-.online-class{
+.online-class,
+.academics{
   font-family:"proxima-nova-extra-condensed",sans-serif;
   font-weight:900;
+  font-size:2.5em;
+  letter-spacing:3px;
   font-style:normal;
 }
 .online-heading:before{
@@ -483,7 +510,7 @@ a.title{
   width:70px;
   height:70px;
   position:absolute;
-  top:15%;
+  top:18%;
   right:23%;
   margin-bottom:30px;
   z-index: 9999;
@@ -532,7 +559,8 @@ a.title{
   top: 8px;
   left: 50px;
 }
-a:hover{
+.education a:hover
+{
   color:#fae596;
   transition:color 0.4s ease-in-out;
   -webkit-transition:color 0.4s ease-in-out;
@@ -544,7 +572,9 @@ a:hover{
 #skills-chart{
   width:100%;
 }
-#skills-display h2,#projects h2,#mapDiv h2{
+#skills-display h2,
+#projects h2,
+#mapDiv h2{
   font-family:"Open Sans",sans-serif;
   font-size:4em;
   font-weight:900;
@@ -557,19 +587,22 @@ a:hover{
 .skills-view .label{
   margin:10px;
   font-size:1em;
-  font-weight:300;
+  font-weight:400;
 }
 .skills-view .red{
-  background-color:#FF5A5E; 
+  background-color:#ff9987; 
 }
 .skills-view .green{
   background-color: #5AD3D1;
 }
 .skills-view .dark{
-  background-color:#c2cfa3;
+  background-color:#e1d8c9 ;
 }
-.skills-view .yellow{
-  background-color: #fae596;
+.skills-view .blue{
+  background-color: #47DCF7;
+}
+.skills-view .purple{
+  background-color: #9068be;
 }
 .chart div {
   font: 10px sans-serif;
@@ -618,12 +651,24 @@ span {
   -moz-transition:color 0.3s ease-in-out;
   -o-transition:color 0.3s ease-in-out;
 }
-#rightContacts li:hover{
+#rightContacts li:hover,
+#rightContacts a:visited{
   color:#6ed3cf;
+  text-decoration: none;
 }
+
 #rightContacts .text-uppercase{
   font-size:1.6em;
   font-weight:100;
+}
+a:-webkit-any-link{
+  text-decoration: none;
+}
+a:-moz-any_link{
+  text-decoration: :none;
+}
+a:-o-any_link{
+  text-decoration: none;
 }
 #map {
   position:relative;
@@ -639,7 +684,11 @@ span {
   height:400px;
   width: 100%;
   padding-bottom:4%;
-
+  background:#5A5959;
+}
+#mapDiv h2{
+  margin-top: 0;
+  color:#fff;
 }
 .blog,
 .email,
@@ -669,6 +718,7 @@ span {
 .icomoon-group{
   font-family:"icomoon";
   speak:none;
+  color:#3b3a36;
   font-style:normal;
   font-size:2em;
 }

@@ -94,7 +94,6 @@ var education = {
 }
 education.display = function() {
 	if(education.schools.length>0) {
-		
 	    for (var item in education.schools) {
 	    	$("#education").append(HTMLschool);
 	    	$("#education").append(HTMLschoolStart);
@@ -224,6 +223,7 @@ projects.display = function() {
         	formattedTitle=formattedTitle.replace("%description%",project.description);
         	formattedTitle=formattedTitle.replace("%month%",project.month);
         	formattedTitle=formattedTitle.replace("%year%",project.year);
+        	formattedTitle=formattedTitle.replace("%title%",project.title);
         $el.append(formattedTitle);
 
         for (var image in project.images) {
@@ -242,7 +242,7 @@ work.display = function() {
     }
     work.jobs.forEach(function(job){
         var formattedEmployer = HTMLworkEmployer.replace("%data%", job.employer);
-            formattedEmployer=formattedEmployer.replace("%url%",job.link);
+            formattedEmployer=formattedEmployer.replace("%url%",job.url);
             formattedEmployer=formattedEmployer.replace("%title%",job.employer);
             formattedEmployer=formattedEmployer.replace("%month%",job.month);
             formattedEmployer=formattedEmployer.replace("%year%",job.year);

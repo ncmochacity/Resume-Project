@@ -13,7 +13,7 @@ These are HTML strings. As part of the course, you'll be using JavaScript functi
 replace the %data% placeholder text you see in them.
 */
 var HTMLheaderName = '<h1 id="name" class="text-center text-uppercase">%data%</h1>';
-var HTMLheaderRole = '<br><span class="role text-center text-uppercase">%data%</span><span class="lnr lnr-code"></span><hr/>';
+var HTMLheaderRole = '<br><span class="role text-center text-uppercase">%data%</span><span class="lnr lnr-code"></span>';
 
 var HTMLcontactGeneric = '<li class="flex-item"><span>%contact%</span><span class="text-uppercase">%data%</span></li>';
 var HTMLFacebook = '<li class="flex-item"><a href="https://www.facebook.com/N-C-Web-Design-1374398246183996/" title="Facebook"><i class="icon-facebook icomoon-group"></i></a></li>';
@@ -30,14 +30,14 @@ var HTMLskillsStart = '<h3 id="skillsH3">Skills at a Glance:</h3><ul id="skills"
 var HTMLskills = '<li class="flex-item"><span class="white-text">%data%</span></li>';
 
 var HTMLworkStart = '<div class="work-entry col-md-4"></div>';
-var HTMLworkEmployer = '<div class="img-description work-description"><span class="caption"><div class="clock work-clock"></div><div class="date-month text-uppercase">%month%</div><div class="date-year">%year%</div><a href="%url%" class="text-uppercase title" title="%title%">%data%</a></span><div class="job text-uppercase">-%job%</div><div class="text-section">%description%</div><div class="map"></div><div class="location-text text-uppercase text-center">%location%</div></div>';
+var HTMLworkEmployer = '<div class="img-description work-description"><span class="caption"><div class="clock work-clock"></div><div class="date-month text-uppercase">%month%</div><div class="date-year">%year%</div><a href="%url%" class="text-uppercase title fancybox-thumb" data-fancybox-group="work-gallery" rel="fancybox-thumb" title="%title%">%data%</a></span><div class="job text-uppercase">-%job%</div><div class="text-section">%description%</div><div class="map"></div><div class="location-text text-uppercase text-center">%location%</div></div>';
 var HTMLworkTitle = ' %data%</a></span></div>';
 var HTMLworkDescription = '<p class="text-section">%data%</p>';
-var HTMLworkImage='<a href="%url%" target="_blank" data-fancybox-group="work-gallery"  title="%title%" class="fancybox-thumb" rel="fancybox-thumb"><img class="img-responsive portfolio-img" alt="work images" src="%data%"></a>';
+var HTMLworkImage='<a href="%url%" target="_blank" title="%title%" class="fancybox-thumb" rel="fancybox-thumb"><img class="img-responsive portfolio-img" alt="work images" src="%data%"></a>';
 
 var HTMLprojectStart = '<div class="project-entry col-md-4"></div>';
-var HTMLprojectTitle = '<div class="img-description"><span class="caption"><div class="clock"></div><div class="date-month" >%month%</div><div class="date-year">%year%</div><a href="%url%" target="_blank" class="text-uppercase title">%data%</a></span><p class="description">%description%</p></div>';
-var HTMLprojectImage = '<a href="%url%" target="_blank" data-fancybox-group="gallery"  title="%title%" class="fancybox-thumb" rel="fancybox-thumb"><img class="img-responsive portfolio-img" alt="portfolio pictures"src="%data%" ></a>';
+var HTMLprojectTitle = '<div class="img-description"><span class="caption"><div class="clock"></div><div class="date-month" >%month%</div><div class="date-year">%year%</div><a href="%url%" target="_blank" class="text-uppercase title fancybox-thumb" data-fancybox-group="gallery" rel="fancybox-thumb" title="%title%">%data%</a></span><p class="description">%description%</p></div>';
+var HTMLprojectImage = '<a href="%url%" target="_blank" title="%title%" class="fancybox-thumb" rel="fancybox-thumb"><img class="img-responsive portfolio-img" alt="portfolio pictures"src="%data%" ></a>';
 var HTMLlink='<a href="%url%" target="_blank"></a>';
 
 var HTMLschoolStart = '<div class="education-entry col-md-6"></div>';

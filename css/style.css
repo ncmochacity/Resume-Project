@@ -417,16 +417,21 @@ a.title{
   right:20px;
   bottom:10px;
   padding:0;
-  z-index: 9999;
   margin:0 auto;
-  display:block;
+  z-index: 9999;
+  display:none;
   transition:opacity 0.2s ease-in-out;
   -moz-transition:opacity 0.2s ease-in-out;
   -ms-transition:opacity 0.2s ease-in-out;
   -o-transition:opacity 0.2s ease-in-out;
   -webkit-transition:opacity 0.2s ease-in-out;
 }
-
+.project-entry:hover .img-description{
+  display:block;
+}
+.work-entry:hover .img-description{
+  display:block;
+}
 .img-description:before,
 .img-description .caption{
   display:inline-block;

@@ -25,7 +25,3 @@ $(".page-header").each(function(){
 	});
 	$window.trigger("scroll");
 })
-$(".gallery").each(function(){
-	var $container=$(this);
-	$container.on("mouseenter mouseleave","")
-})

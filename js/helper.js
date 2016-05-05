@@ -12,48 +12,46 @@ Cameron Pittman
 These are HTML strings. As part of the course, you'll be using JavaScript functions
 replace the %data% placeholder text you see in them.
 */
-var HTMLheaderName = '<h1 id="name" class="text-center">%data%</h1>';
-var HTMLheaderRole = '<span>%data%</span><hr/>';
+var HTMLheaderName = '<h1 id="name" class="text-center text-uppercase">%data%</h1>';
+var HTMLheaderRole = '<br><span class="role text-center text-uppercase">%data%</span><span class="lnr lnr-code"></span>';
 
-var HTMLcontactGeneric = '<li class="flex-item"><span class="orange-text">%contact%</span><span class="white-text">%data%</span></li>';
-var HTMLmobile = '<li class="flex-item"><span class="orange-text">mobile</span><span class="white-text">%data%</span></li>';
-var HTMLemail = '<li class="flex-item"><span class="orange-text">email</span><span class="white-text">%data%</span></li>';
-var HTMLtwitter = '<li class="flex-item"><span class="orange-text">twitter</span><span class="white-text">%data%</span></li>';
-var HTMLgithub = '<li class="flex-item"><span class="orange-text">github</span><span class="white-text">%data%</span></li>';
-var HTMLblog = '<li class="flex-item"><span class="orange-text">blog</span><span class="white-text">%data%</span></li>';
-var HTMLlocation = '<li class="flex-item"><span class="orange-text">location</span><span class="white-text">%data%</span></li>';
-
+var HTMLcontactGeneric = '<li class="flex-item"><span>%contact%</span><span class="text-uppercase">%data%</span></li>';
+var HTMLFacebook = '<li class="flex-item"><a href="https://www.facebook.com/N-C-Web-Design-1374398246183996/" title="Facebook"><i class="icon-facebook icomoon-group"></i></a></li>';
+var HTMLemail = '<li class="flex-item"><span class="email"></span><span class="text-uppercase">%data%</span></li>';
+var HTMLtwitter = '<li class="flex-item"><a href="https://twitter.com/nchenwebtech" title="twitter"><i class="icon-twitter icomoon-group"></i></a></li>';
+var HTMLgithub = '<li class="flex-item"><a href="https://github.com/ncmochacity" title="Github"><i class="icon-github icomoon-group"></i></a></li>';
+var HTMLblog = '<li class="flex-item"><span class="blog"></span><span>%data%</span></li>';
+var HTMLlocation = '<li class="flex-item"><span class="location"></span><span class="text-uppercase">%data%</span></li>';
+var HTMLLinkedIn='<li class="flex-item"><a href="https://www.linkedin.com/in/nicki-chen-1b7781a7" title="LinkedIn"><i class="icon-linkedin2 icomoon-group"></i></a></li>';
 var HTMLbioPic = '<img src="%data%" class="biopic">';
 var HTMLWelcomeMsg = '<span class="welcome-message">%data%</span>';
 
 var HTMLskillsStart = '<h3 id="skillsH3">Skills at a Glance:</h3><ul id="skills" class="flex-box"></ul>';
 var HTMLskills = '<li class="flex-item"><span class="white-text">%data%</span></li>';
 
-var HTMLworkStart = '<div class="work-entry"></div>';
-var HTMLworkEmployer = '<a href="#">%data%';
-var HTMLworkTitle = ' - %data%</a>';
-var HTMLworkDates = '<div class="date-text">%data%</div>';
-var HTMLworkLocation = '<div class="location-text">%data%</div>';
-var HTMLworkDescription = '<p><br>%data%</p>';
+var HTMLworkStart = '<div class="work-entry col-md-4"></div>';
+var HTMLworkEmployer = '<div class="img-description work-description"><span class="caption"><div class="clock work-clock"></div><div class="date-month text-uppercase">%month%</div><div class="date-year">%year%</div><a href="%url%" class="text-uppercase title fancybox-thumb" data-fancybox-group="work-gallery" rel="fancybox-thumb" title="%title%">%data%</a></span><div class="job text-uppercase">-%job%</div><div class="text-section">%description%</div><div class="map"></div><div class="location-text text-uppercase text-center">%location%</div></div>';
+var HTMLworkTitle = ' %data%</a></span></div>';
+var HTMLworkDescription = '<p class="text-section">%data%</p>';
+var HTMLworkImage='<a href="%url%" target="_blank" title="%title%" class="fancybox-thumb" rel="fancybox-thumb"><img class="img-responsive portfolio-img" alt="work images" src="%data%"></a>';
 
-var HTMLprojectStart = '<div class="project-entry"></div>';
-var HTMLprojectTitle = '<a href="#">%data%</a>';
-var HTMLprojectDates = '<div class="date-text">%data%</div>';
-var HTMLprojectDescription = '<p><br>%data%</p>';
-var HTMLprojectHolder='<div class="holder"></div>'
-var HTMLprojectImage = '<img src="%data%" class="img-responsive">';
+var HTMLprojectStart = '<div class="project-entry col-md-4"></div>';
+var HTMLprojectTitle = '<div class="img-description"><span class="caption"><div class="clock"></div><div class="date-month" >%month%</div><div class="date-year">%year%</div><a href="%url%" target="_blank" class="text-uppercase title fancybox-thumb" data-fancybox-group="gallery" rel="fancybox-thumb" title="%title%">%data%</a></span><p class="description">%description%</p></div>';
+var HTMLprojectImage = '<a href="%url%" target="_blank" title="%title%" class="fancybox-thumb" rel="fancybox-thumb"><img class="img-responsive portfolio-img" alt="portfolio pictures"src="%data%" ></a>';
+var HTMLlink='<a href="%url%" target="_blank"></a>';
 
-var HTMLschoolStart = '<div class="education-entry"></div>';
-var HTMLschoolName = '<a href="#">%data%';
-var HTMLschoolDegree = ' -- %data%</a>';
-var HTMLschoolDates = '<div class="date-text">%data%</div>';
+var HTMLschoolStart = '<div class="education-entry col-md-6"></div>';
+var HTMLschool='<div class="college text-center"><h3 class="academics text-uppercase text-center">Academics</h3></div>';
+var HTMLschoolName = '<div class="school-icon"></div><a href="#" class="school text-uppercase text-center" title="%title%">%data%</a>';
+var HTMLschoolDegree = ' <span class="degree text-uppercase">-- %data%</span>';
+var HTMLschoolDates = '<div class="date-month text-uppercase">%month%</div><div class="date-year text-uppercase">%year%</div>';
 var HTMLschoolLocation = '<div class="location-text">%data%</div>';
-var HTMLschoolMajor = '<em><br>Major: %data%</em>';
-
-var HTMLonlineClasses = '<h3>Online Classes</h3>';
-var HTMLonlineTitle = '<a href="#">%data%';
+var HTMLschoolMajor = '<span class="major text-uppercase text-center"><br>Major: %data%</span>';
+var HTMLonlineStart='<div class="online-entry col-md-6"></div>';
+var HTMLonlineClasses = '<div class="online-heading text-center"><h3 class="online-class text-uppercase">Online Classes</h3></div>';
+var HTMLonlineTitle = '<a href="%url%" target="_blank" class="online-title text-uppercase text-center" title="%title%">%data%<span class="arrow-right text-center"></span>';
 var HTMLonlineSchool = ' - %data%</a>';
-var HTMLonlineDates = '<div class="date-text">%data%</div>';
+var HTMLonlineDates = '<div class="calendar text-center"></div><div class="date-month text-uppercase text-center">%month%</div><div class="date-year text-center">%year%</div>';
 var HTMLonlineURL = '<br><a href="#">%data%</a>';
 
 var internationalizeButton = '<button>Internationalize</button>';
@@ -106,15 +104,50 @@ var map;    // declares a global map variable
 Start here! initializeMap() is called when page is loaded.
 */
 function initializeMap() {
+  
   console.log("initializeMap");
   var locations;
-
   var mapOptions = {
-    zoom: 8,
-    center: new google.maps.LatLng(38.043333,-98.583333),
-    mapTypeId: google.maps.MapTypeId.TERRAIN
-  };
-
+    zoom:17,
+    center: new google.maps.LatLng(32.97598,-96.869088),
+    mapTypeId: google.maps.MapTypeId.ROADMAP,
+    scrollwheel:false,
+    disableDefaultUI:true,
+    navigationControl:false,
+    mapTypeControl:false,
+    scaleControl:false,
+    styles:[
+      {
+        "stylers":[
+          { "gamma" :1 },
+          { "saturation":-41 },
+          { "hue": "#00ffb3" },
+          { "lightness":1 }
+        ] 
+      },{
+        "featureType": "road.highway",
+        "stylers": [
+          { "saturation": -41 },
+          { "lightness": 1 }
+        ]
+      },{
+        "featureType":"poi",
+        "stylers": [
+          { "visibility": "simplified" }
+        ]
+      },{
+        "featureType": "water",
+        "stylers":  [
+          { "visibility": "on"},
+          { "saturation": -41 },
+          { "lightness": 1 }
+        ]
+      }
+    ]
+  }
+  //end of mapOptions
+  
+  
   // This next line makes `map` a new Google Map JavaScript Object and attaches it to
   // <div id="map">, which is appended as part of an exercise late in the course.
   map = new google.maps.Map(document.querySelector('#map'), mapOptions);
@@ -169,7 +202,7 @@ function initializeMap() {
     // or hover over a pin on a map. They usually contain more information
     // about a location.
     var infoWindow = new google.maps.InfoWindow({
-      content: name
+      content: name,
     });
 
     // hmmmm, I wonder what this is about...

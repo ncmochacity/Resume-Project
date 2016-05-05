@@ -128,7 +128,7 @@ var work = {
     {
     	"employer":"100-Day-Code-Challenge",
     	"title":"Web Developer in-training",
-    	"location":"web",
+    	"location":"Carrollton,TX",
     	"month":"May",
     	"year":"2014",
     	"description":"I coded daily web apps for a streak of 100 Days.",
@@ -140,7 +140,7 @@ var work = {
     {
         "employer": "NC Web Design",
         "title": "UI Developer",
-		"location": "Carrollton",
+		"location": "Carrollton,TX",
         "month":"Dec",
         "year":"2014",
         "description": "Develop and code anything with the web",
@@ -150,7 +150,7 @@ var work = {
     },{
     	"employer":"Bravelearner LLC",
     	"title":"Social Media Specialist",
-    	"location":"Dallas",
+    	"location":"Dallas,TX",
     	"month":"May",
     	"year":"2015",
     	"description":"Create weekly content and grphics on Facebook.",

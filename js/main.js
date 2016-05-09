@@ -25,3 +25,49 @@ $(".page-header").each(function(){
 	});
 	$window.trigger("scroll");
 })
+//scrolling down
+$(".page-scroll").click(function(event){
+	var $anchor=$(this);
+	$("html,body").stop().animate({
+		scrollTop:$($anchor.attr("href")).offset().top
+	},1500,"easeInOutQuad");
+});
+
+//smooth scrolling back to top functionality
+function scrollableElement(){
+	var i, len, el, $el, scrollable;
+	for (i = 0, len = arguments.length; i < len; i++ ){
+		el=arguments[i];
+		$el=$(el);
+		if($el.scrollTop() > 0){
+			return el;
+		}
+		else{
+			$el.scrollTop(1);
+			scrollable=$el.scrollTop() > 0;
+			$el.scrollTop(0);
+			if (scrollable){
+				return el;
+			}
+		}
+	}
+	return [];
+}
+$(window).scroll(function(){
+	if($(this).scrollTop() > 100){
+		$(".scroll-up").fadeIn();
+	}
+	else{
+		$(".scroll-up").fadeOut();
+	}
+})
+$(".scroll-up").each(function(){
+	var el=scrollableElement("html","body");
+	$(this).click(function(event){
+		event.preventDefault();
+		$(el).animate({
+			scrollTop:0
+		},1500,"easeInOutQuad")
+	});
+});
+

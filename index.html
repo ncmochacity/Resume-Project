@@ -6,6 +6,7 @@
   <meta name="description" content="This is the Udacity Nanodegree portfolio of Nicki Chen, a UI developer and Front-end developer based in Dallas,TX">
   <meta name="keywords" content="Nicki Chen,webdesign,webdesigner,web designer, UX,UI,deign,front-end development">
   <meta name="author" content="Nicki Chen">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Introduction | Nicki Chen's Online Resume</title>
   <!-- Load the page styles. -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
@@ -22,7 +23,7 @@
   <meta name="viewport" content="width=device-width">
 </head>
 <body unresolved>
- <div class="container">
+  <div class="container">
   <header class="page-header sticky" role="banner">
     <div class="inner">
       <nav class="primary-nav" role="navigation">
@@ -45,9 +46,9 @@
   <div id="main" role="main">
     <div id="header" class="center-content clearfix">
       <ul id="topContacts"></ul>
-      <button type="button" class="back-to-top">
-        return to top
-      </button>
+      <a class="page-scroll" href="#skills-display" title="scroll down">
+        <span class="lnr lnr-chevron-down"></span>
+      </a>
     </div>
     <div class="row">
       <div class="col-md-12 box-full">
@@ -69,7 +70,7 @@
     <div class="row">
       <div class="col-md-12 box-full">
           <div id="projects" class="project-container gallery text-center">
-  	         <h2>Projects</h2>
+             <h2>Projects</h2>
           </div>
       </div>
     </div>
@@ -97,12 +98,15 @@
           </ul>
         </div>
       </div>
-
+      <a class="scroll-up" title="back to top" href="#">
+      <span class="lnr lnr-chevron-up arrow-up"></span>
+      </a>
     </div>
   </div>
 </div>
   <script src="js/jQuery.js"></script>
   <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
   <script src="js/Chart.js"></script>
   <script src="js/jquery.fancybox.js"></script>
   <script src"js/jquery.fancybox.pack.js"></script>

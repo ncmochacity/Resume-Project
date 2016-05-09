@@ -22,6 +22,9 @@
   padding:0;
   margin:0;
   font-family: 'Azo-sans-web', sans-serif;
+  border-radius:0 !important;
+  -webkit-border-radius:0 !important;
+  -moz-border-radius:0 !important;
 }
 
 .clearfix {
@@ -141,9 +144,67 @@ a:visited{
   display:block;
   text-align: center;
 }
+.lnr-chevron-down{
+  color:#F7EDE1;
+  font-size:2.1em;
+}
+.lnr-chevron-down:after{
+  content:"";
+  border:1px solid #F7EDE1;
+  display:block;
+  margin:0 auto;
+  position:relative;
+  top: -35px;
+  left: 1px;
+  border-radius:50% !important;
+  width:42px;
+  height:42px;
+
+}
+.lnr-chevron-up{
+  font-size:2.1em;
+  color:#333;
+}
+.no-js .scroll-up{
+  display:none;
+}
+.scroll-up{
+  position:fixed;
+  bottom:2em;
+  right:30px;
+  display:none;
+  text-decoration:none !important;
+}
+.arrow-up{
+  display:block;
+  position:relative;
+  cursor:pointer;
+  text-align: center;
+}
+.arrow-up:hover{
+  text-decoration:none;
+}
+.arrow-up:after{
+  content:"";
+  border:1px solid #333;
+  display:block;
+  margin:0 auto;
+  position:relative;
+  top:-30px;
+  border-radius:50% !important;
+  width:42px;
+  height:42px;
+}
+.page-scroll{
+  display:block;
+  text-align:center;
+  position:relative;
+  cursor:pointer;
+  top:20px;
+}
 .center-content {
   padding-top: 2.5%;
-  padding-bottom: 2.5%
+  padding-bottom: 2.5;
 }
 /*header styles */
 .page-header{
@@ -154,15 +215,13 @@ a:visited{
 .page-header.sticky{
   position:fixed;
   top:0;
-  z-index:9999;
-  padding-bottom: 0;
-  background:#fff;
+  background-color:#fff;
+  z-index: 999999999;
+  padding:10px;
+  padding-bottom:40px;
 }
 .primary-nav{
   display:none;
-  width:100%;
-  margin-left:auto;
-  margin-right:auto;
 }
 .primary-nav.open{
   display:block;
@@ -203,6 +262,7 @@ a:visited{
   top:10px;
   z-index:16;
 }
+
 #menu .before{
   position:absolute;
   width:28px;
@@ -426,8 +486,8 @@ a.title{
 .education-entry{
   background-color:#f97e72;
   color:#fff;
-  top:42px;
   width:100%;
+  top:50px;
   padding-bottom:50px;
 }
 .college{
@@ -452,18 +512,20 @@ a.title{
 }
 .degree{
   color:#fff;
-  margin-top:20px;
   display:block;
+  margin-top:50px;
 }
 .major{
+  margin-top:0;
   display: block;
-  margin-right:70px;
+  
 }
 .online-entry{
   background-color:rgba(117, 230, 209, 0.98);
   width:100%;
-  padding-bottom:50px;
+  padding-bottom: 50px;
 }
+
 .online-class,
 .academics{
   font-family:"proxima-nova-extra-condensed",sans-serif;
@@ -471,25 +533,10 @@ a.title{
   font-size:2.5em;
   letter-spacing:3px;
   font-style:normal;
-}
-.online-heading:before{
-  content:url("../images/lnr-screen.svg");
-  width:70px;
-  height:70px;
-  position:absolute;
-  margin-bottom:30px;
-  z-index: 9999;
-}
-.education .date-mont,
-.education .date-year{
-  top:-20px;
-}
-.education .date-month{
-  top:-60px;
   
 }
-.education .date-year{
-  top:-50px;
+.academics{
+  display:none;
 }
 .calendar{
   content:url("../images/calendar.svg");
@@ -507,17 +554,27 @@ a.title{
   font-size:1.5em;
   position:relative;
   display:block;
-  top:90px;
-  width:60%;
+  top:50px;
+  width:50%;
   margin:0 auto;
 }
 .arrow-right{
   content:url("../images/lnr-chevron-right.svg");
   width:30px;
   height:30px;
-  position: relative;
-  top: 8px;
-  left: 60px;
+  display:block;
+  top: 20px;
+  float:right;
+}
+.screen{
+  content:url("../images/lnr-screen.svg");
+  width:30px;
+  height:30px;
+  top:40px;
+  z-index:99999;
+  display:block;
+  margin:0 auto;
+  position:relative;
 }
 .education a:hover
 {
@@ -527,10 +584,23 @@ a.title{
   -moz-transition:color 0.4s ease-in-out;
   -o-transition:color 0.4s ease-in-out;
 }
+.education .date-month,
+.education .date-year{  
+  top:-50px;
+  left:-160px;
+}
+.education .date-year{
+  top:-30px;
+}
+.calendar{
+  top:50px;
+}
+
 /* Bar chart stuff */
 
 #skills-chart{
   width:100%;
+  margin:0 auto;
 }
 #skills-display h2,
 #projects h2,
@@ -541,12 +611,11 @@ a.title{
   color:#6a5750;
   text-transform: uppercase;
 }
-.skills-view{
-  padding:50px;
-}
+
 .skills-view .label{
-  margin:10px;
   font-size:1em;
+  display:block;
+  text-align:center;
   font-weight:400;
 }
 .skills-view .red{
@@ -581,6 +650,7 @@ span {
 .contact{
   background-color:#f0eceb;
   color:#49412c;
+  margin-top:5%;
 }
 #letsConnect {
   text-align: center;
@@ -593,7 +663,7 @@ span {
   font-weight:800;
   font-size:4em;
   color:#b0a18e;
-  padding-top:20px;
+  
 }
 #footerContacts,
 #rightContacts
@@ -604,23 +674,20 @@ span {
   display:block;
 }
 #rightContacts li{
-  display:inline-block;
+  display:block;
   margin:30px 30px;
-  font-size:2.5em;
+  font-size:2em;
   transition:color 0.3s ease-in-out;
   -webkit-transition:color 0.3s ease-in-out;
   -moz-transition:color 0.3s ease-in-out;
   -o-transition:color 0.3s ease-in-out;
 }
 #rightContacts li:hover,
+.emailme:hover,
+.tumblr-blog:hover,
 #rightContacts a:visited{
   color:#6ed3cf;
   text-decoration: none;
-}
-
-#rightContacts .text-uppercase{
-  font-size:1.6em;
-  font-weight:100;
 }
 a:-webkit-any-link{
   text-decoration: none;
@@ -633,23 +700,27 @@ a:-o-any_link{
 }
 #map {
   position:relative;
-  overflow:hidden;
   background-color: rgb(229, 227, 223);
-  display: block;
+  display:block;
   height: 100%;
+  overflow: hidden;
   width:100%;
-
 }
 
 #mapDiv {
-  height:400px;
+  height:250px;
   width: 100%;
-  padding-bottom:4%;
+  margin-bottom:25%;
   background:#5A5959;
 }
 #mapDiv h2{
-  margin-top: 0;
+  margin-top:0;
   color:#fff;
+  line-height:44px;
+}
+.emailme,
+.tumblr-blog{
+  color:#333;
 }
 .blog,
 .email,
@@ -660,6 +731,7 @@ a:-o-any_link{
   top:13px;
   right:10px;
 }
+
 .blog{
   content:url("../images/lnr-screen.svg");
 }
@@ -689,18 +761,39 @@ a:-o-any_link{
 .icon-facebook:before {
     content: "\e902";
 }
-@media only screen and (max-width: 1024px) {
+@media only screen and (min-width:1025px){
+  .education-entry .date-month{
+    margin-left:-50px;
+  }
+  .education-entry .date-year{
+    margin-left:-20px;
+  }
+  .online-entry .date-month{
+    margin-left:30px;
+  }
+  .degree{
+    margin-top:20px;
+  }
+}
+@media only screen and (min-width:910px ) and (max-width: 1024px) {
   #letsConnect {
     margin-top: 5%;
   }
-  
+  .degree{
+    margin-top:10px;
+  }
+  .education-entry .date-year{
+    margin-left:-30px;
+  }
+  .education-entry .date-month{
+    margin-left:-60px;
+  }
 }
 
 @media only screen and (max-width:900px) {
   .biopic {
     width: 175px;
   }
-  
 }
 
 @media only screen and (max-width: 750px) {
@@ -715,17 +808,45 @@ a:-o-any_link{
   }
 }
 
-
-
 @media only screen and (min-width: 750px) {
   #skillsH3,
   .biopic {
     display: block;
   }
 }
+@media only screen and (min-width:580px) and (max-width:900px){
+  .education .date-month{
+    top:0px;
+  }
+  .education-entry .date-month,
+  .education-entry .date-year{
+    margin-top:30px;
+  } 
+  .degree{
+    margin-top:30px;
+  }
+  .education-entry .date-month{
+    margin-left:-60px;
+  }
+  .education-entry .date-year{
+    margin-left:-30px;
+  }
+  .online-entry .date-year{
+    margin-top:0px;
+  }
+  .online-entry .date-month{
+    margin-left:-20px;
+  }
+  .online-title{
+    left:20px;
+  }
+}
 @media only screen and (min-width: 550px){
   #menu{
     display: none;
+  }
+  .page-header.sticky{
+    padding-bottom: 0;
   }
   .primary-nav{
     display:block;
@@ -744,11 +865,62 @@ a:-o-any_link{
     display: inline-block;
 
   }
+  
+  .academics{
+    display:block;
+  }
   .education-entry{
     width:48%;
+    float:left;
+    top:70px;
   }
   .online-entry{
     width:52%;
     float:right;
+    height:100%;
   }
+  
+  .skills-view .label{
+    margin:10px;
+    display:inline-block;
+    margin-bottom:30px;
+    left:5%;
+    position:relative;
+  }
+  .online-title{
+    top:70px;
+  }
+  .education .date-month,
+  .education .date-year{
+    float:left;
+    left:80px;
+  }
+  .education .date-month{
+    top:0px;
+  }
+  .education .date-year{
+    left:42px;
+    top:40px;
+  }
+  .education-entry .date-month{
+    top:-80px;
+  }
+  .education-entry .date-year{
+    top:-40px;
+  }
+  #mapDiv{
+    margin-bottom:0;
+  }
+  #rightContacts{
+    width:50%;
+    float:right;
+  }
+  #rightContacts li{
+    display:inline-block;
+  }
+  #footerContacts{
+    width:50%;
+    float:left;
+  }
+
 }

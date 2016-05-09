@@ -17,10 +17,10 @@ var HTMLheaderRole = '<br><span class="role text-center text-uppercase">%data%</
 
 var HTMLcontactGeneric = '<li class="flex-item"><span>%contact%</span><span class="text-uppercase">%data%</span></li>';
 var HTMLFacebook = '<li class="flex-item"><a href="https://www.facebook.com/N-C-Web-Design-1374398246183996/" title="Facebook"><i class="icon-facebook icomoon-group"></i></a></li>';
-var HTMLemail = '<li class="flex-item"><span class="email"></span><span class="text-uppercase">%data%</span></li>';
+var HTMLemail = '<li class="flex-item"><a href="mailto:chenwebsolutions@gmail.com" title="email me" class="emailme"><span class="email"></span><span class="text-uppercase email-me">%data%</span></a></li>';
 var HTMLtwitter = '<li class="flex-item"><a href="https://twitter.com/nchenwebtech" title="twitter"><i class="icon-twitter icomoon-group"></i></a></li>';
 var HTMLgithub = '<li class="flex-item"><a href="https://github.com/ncmochacity" title="Github"><i class="icon-github icomoon-group"></i></a></li>';
-var HTMLblog = '<li class="flex-item"><span class="blog"></span><span>%data%</span></li>';
+var HTMLblog = '<li class="flex-item"><a href="https://donutsbean.tumblr.com/" title="my tumblr blog" class="tumblr-blog"><span class="blog"></span><span>%data%</span></a></li>';
 var HTMLlocation = '<li class="flex-item"><span class="location"></span><span class="text-uppercase">%data%</span></li>';
 var HTMLLinkedIn='<li class="flex-item"><a href="https://www.linkedin.com/in/nicki-chen-1b7781a7" title="LinkedIn"><i class="icon-linkedin2 icomoon-group"></i></a></li>';
 var HTMLbioPic = '<img src="%data%" class="biopic">';
@@ -48,7 +48,7 @@ var HTMLschoolDates = '<div class="date-month text-uppercase">%month%</div><div 
 var HTMLschoolLocation = '<div class="location-text">%data%</div>';
 var HTMLschoolMajor = '<span class="major text-uppercase text-center"><br>Major: %data%</span>';
 var HTMLonlineStart='<div class="online-entry col-md-6"></div>';
-var HTMLonlineClasses = '<div class="online-heading text-center"><h3 class="online-class text-uppercase">Online Classes</h3></div>';
+var HTMLonlineClasses = '<div class="online-heading text-center"><h3 class="online-class text-uppercase">Online Classes</h3><div class="screen"></div></div>';
 var HTMLonlineTitle = '<a href="%url%" target="_blank" class="online-title text-uppercase text-center" title="%title%">%data%<span class="arrow-right text-center"></span>';
 var HTMLonlineSchool = ' - %data%</a>';
 var HTMLonlineDates = '<div class="calendar text-center"></div><div class="date-month text-uppercase text-center">%month%</div><div class="date-year text-center">%year%</div>';
@@ -108,7 +108,7 @@ function initializeMap() {
   console.log("initializeMap");
   var locations;
   var mapOptions = {
-    zoom:17,
+    zoom:13,
     center: new google.maps.LatLng(32.97598,-96.869088),
     mapTypeId: google.maps.MapTypeId.ROADMAP,
     scrollwheel:false,

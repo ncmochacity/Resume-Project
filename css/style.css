@@ -727,12 +727,16 @@ a:-o-any_link{
 }
 .blog,
 .email,
-.location{
+.location,
+.phone{
   width:35px;
   height:35px;
   position:relative;
   top:13px;
   right:10px;
+}
+.phone{
+  content:url("../images/lnr-smartphone.svg");
 }
 
 .blog{

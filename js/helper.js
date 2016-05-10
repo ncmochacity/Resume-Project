@@ -20,6 +20,7 @@ var HTMLFacebook = '<li class="flex-item"><a href="https://www.facebook.com/N-C-
 var HTMLemail = '<li class="flex-item"><a href="mailto:chenwebsolutions@gmail.com" title="email me" class="emailme"><span class="email"></span><span class="text-uppercase email-me">%data%</span></a></li>';
 var HTMLtwitter = '<li class="flex-item"><a href="https://twitter.com/nchenwebtech" title="twitter"><i class="icon-twitter icomoon-group"></i></a></li>';
 var HTMLgithub = '<li class="flex-item"><a href="https://github.com/ncmochacity" title="Github"><i class="icon-github icomoon-group"></i></a></li>';
+var HTMLmobile='<li class="flex-item"><span class="phone"></span><span class="text-uppercase mobile">%data%</span></li>';
 var HTMLblog = '<li class="flex-item"><a href="https://donutsbean.tumblr.com/" title="my tumblr blog" class="tumblr-blog"><span class="blog"></span><span>%data%</span></a></li>';
 var HTMLlocation = '<li class="flex-item"><span class="location"></span><span class="text-uppercase">%data%</span></li>';
 var HTMLLinkedIn='<li class="flex-item"><a href="https://www.linkedin.com/in/nicki-chen-1b7781a7" title="LinkedIn"><i class="icon-linkedin2 icomoon-group"></i></a></li>';

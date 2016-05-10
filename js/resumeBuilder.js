@@ -14,12 +14,12 @@ var bio = {
     "skills": [
         "UX", "awesomeness", "WordPress development", "writing", "design"
     ],
-    "bioPic": "images/self-small.jpg"
+    "biopic": "images/self-small.jpg"
 }
 bio.display = function() {
     var formattedName = HTMLheaderName.replace("%data%", bio.name);
     var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-    var formattedImage = HTMLbioPic.replace("%data%", bio.bioPic);
+    var formattedImage = HTMLbioPic.replace("%data%", bio.biopic);
     var formattedMessage = HTMLWelcomeMsg.replace("%data%", bio.welcomeMessage);
     $("#header").prepend(formattedMessage);
     $("#header").prepend(formattedRole);
@@ -46,6 +46,7 @@ var education = {
         "majors": "Psychology",
         "month":"Dec",
         "year":"2011",
+        "dates":"Dec,2011",
         "url": "http://example.com"
     }],
     "onlineCourses": [{
@@ -53,6 +54,7 @@ var education = {
     	"school": "Udacity",
     	"month":"Mar",
     	"year":"2016",
+        "dates":"Mar, 2016",
     	"url":"https://www.udacity.com/course/intro-to-html-and-css--ud304"
     },
     {
@@ -60,6 +62,7 @@ var education = {
     	"school":"Udacity",
     	"month":"Mar",
     	"year":"2016",
+        "dates":"Mar,2016",
     	"url":"https://www.udacity.com/course/how-to-use-git-and-github--ud775"
     },
     {
@@ -67,6 +70,7 @@ var education = {
     	"school":"Udacity",
     	"month":"Mar",
     	"year":"2016",
+        "dates":"Mar,2016",
     	"url":"https://www.udacity.com/course/responsive-web-design-fundamentals--ud893"
     },
     {
@@ -74,6 +78,7 @@ var education = {
     	"school":"Udacity",
     	"month":"Mar",
     	"year":"2016",
+        "dates":"Mar,2016",
     	"url":"https://www.udacity.com/course/responsive-images--ud882"
     },
     {
@@ -81,6 +86,7 @@ var education = {
         "school": "Udacity",
         "month": "Apr",
         "year":"2016",
+        "dates":"Apr,2016",
         "url": "https://www.udacity.com/course/javascript-basics--ud804"
     },
     {
@@ -88,6 +94,7 @@ var education = {
     	"school":"Udacity",
     	"month":"Apr",
     	"year":"2016",
+        "dates":"Apr,2016",
     	"url":"https://www.udacity.com/course/intro-to-jquery--ud245"
     }]
 
@@ -104,7 +111,8 @@ education.display = function() {
 	            formattedDates=formattedDates.replace("%year%",education.schools[item].year);
 	        var formattedMajors = HTMLschoolMajor.replace("%data%", education.schools[item].majors);
 	        var formattedLocation = HTMLschoolLocation.replace("%data%", education.schools[item].location);
-	        $(".education-entry:last").append(formattedName, formattedDegree, formattedDates, formattedMajors, formattedLocation);
+            var formattedSchoolDates=HTMLschoolStartDates.replace("%data%",education.schools[item].dates);
+	        $(".education-entry:last").append(formattedName,formattedSchoolDates,formattedDegree, formattedDates, formattedMajors, formattedLocation);
 	    }
     }
     if(education.onlineCourses.length > 0){
@@ -131,6 +139,7 @@ var work = {
     	"location":"Carrollton,TX",
     	"month":"May",
     	"year":"2014",
+        "dates":"May,2014",
     	"description":"I coded daily web apps for a streak of 100 Days.",
     	"images":["images/watches-small.png"],
     	"url":"images/watches-medium.png",
@@ -143,6 +152,7 @@ var work = {
 		"location": "Carrollton,TX",
         "month":"Dec",
         "year":"2014",
+        "dates":"Dec,2014",
         "description": "Develop and code anything with the web",
         "images":["images/work-small.jpg"],
         "url":"images/work-medium.jpg",
@@ -153,6 +163,7 @@ var work = {
     	"location":"Dallas,TX",
     	"month":"May",
     	"year":"2015",
+        "dates":"May,2015",
     	"description":"Create weekly content and grphics on Facebook.",
     	"images":["images/bravelearner-small.jpg"],
     	"url":"images/bravelearner-medium.jpg",
@@ -166,6 +177,7 @@ var projects = {
     	"title":"Color This",
     	"month":"Feb",
     	"year":"2013",
+        "dates":"Feb,2013",
     	"description":"First Regular Expression project I created during my 100-Day-Code-Challenge.",
     	"images":["images/color-small.jpg"],
     	"url":"images/color-medium.jpg"
@@ -174,6 +186,7 @@ var projects = {
     	"title":"Soy Foundation Redesign Project",
     	"month":"Oct",
     	"year":"2013",
+        "dates":"Oct,2013",
     	"description":"WordPress development for World Soy Foundation",
     	"images":["images/soy-small.jpg"],
     	"url":"images/soy-medium.jpg"
@@ -182,6 +195,7 @@ var projects = {
     	"title":"Help International",
     	"month":"Mar",
     	"year":"2014",
+        "dates":"Mar,2014",
     	"description":"WordPress redesign project for Help-International Inc",
     	"images":["images/help-international-small.png"],
     	"url":"images/help-international-medium.png"
@@ -191,6 +205,7 @@ var projects = {
         "title": "Graphic design",
         "month": "Mar",
         "year":"2015",
+        "dates":"Mar,2015",
         "description": "Creative design studio made with Photoshop.",
         "images": ["images/creative-small.png"],
         "url":"images/creative-medium.png"
@@ -198,6 +213,7 @@ var projects = {
     	"title":"Portfolio Redesign",
     	"month":"Mar",
     	"year":"2015",
+        "dates":"Mar,2015",
     	"description": "Redesign project focued on the UI and UX design with rich content. ",
     	"images":["images/redesign-small.png"],
     	"url":"images/redesign-medium.png"
@@ -205,6 +221,7 @@ var projects = {
     	"title":"Flat Design UI Kit",
     	"month":"May",
     	"year":"2015",
+        "dates":"May,2015",
     	"description":"Flat Design UI Kit was created for Mobile App design free for downloads.",
     	"images":["images/UI-kit-small.jpg"],
     	"url":"images/UI-kit-medium.jpg"
@@ -224,7 +241,9 @@ projects.display = function() {
         	formattedTitle=formattedTitle.replace("%month%",project.month);
         	formattedTitle=formattedTitle.replace("%year%",project.year);
         	formattedTitle=formattedTitle.replace("%title%",project.title);
-        $el.append(formattedTitle);
+        var formattedDates=HTMLprojectDates.replace("%data%",project.dates);
+        $el.append(formattedTitle)
+           .append(formattedDates);
 
         for (var image in project.images) {
             var formattedImage = HTMLprojectImage.replace("%data%", project.images[image]);
@@ -249,12 +268,14 @@ work.display = function() {
             formattedEmployer=formattedEmployer.replace("%location%",job.location);
             formattedEmployer=formattedEmployer.replace("%job%",job.title);
             formattedEmployer=formattedEmployer.replace("%description%",job.description);
+        var formattedDates=HTMLworkDates.replace("%data%",job.dates);
         var formattedImage=HTMLworkImage.replace("%data%",job.images);
             formattedImage=formattedImage.replace("%url%",job.url);
             formattedImage=formattedImage.replace("%title%",job.employer);
         $("#workExperience").append(HTMLworkStart);
         $(".work-entry:last")
             .append(formattedEmployer)
+            .append(formattedDates)
 	        .append(formattedImage);
     });
 

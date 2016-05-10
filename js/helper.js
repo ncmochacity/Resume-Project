@@ -33,14 +33,16 @@ var HTMLworkStart = '<div class="work-entry col-md-4"></div>';
 var HTMLworkEmployer = '<div class="img-description work-description"><span class="caption"><div class="clock work-clock"></div><div class="date-month text-uppercase">%month%</div><div class="date-year">%year%</div><a href="%url%" class="text-uppercase title fancybox-thumb" data-fancybox-group="work-gallery" rel="fancybox-thumb" title="%title%">%data%</a></span><div class="job text-uppercase">-%job%</div><div class="text-section">%description%</div><div class="map"></div><div class="location-text text-uppercase text-center">%location%</div></div>';
 var HTMLworkTitle = ' %data%</a></span></div>';
 var HTMLworkDescription = '<p class="text-section">%data%</p>';
+var HTMLworkDates='<div class="dates">%data%</div>';
 var HTMLworkImage='<a href="%url%" target="_blank" title="%title%" class="fancybox-thumb" rel="fancybox-thumb"><img class="img-responsive portfolio-img" alt="work images" src="%data%"></a>';
 
 var HTMLprojectStart = '<div class="project-entry col-md-4"></div>';
 var HTMLprojectTitle = '<div class="img-description"><span class="caption"><div class="clock"></div><div class="date-month" >%month%</div><div class="date-year">%year%</div><a href="%url%" target="_blank" class="text-uppercase title fancybox-thumb" data-fancybox-group="gallery" rel="fancybox-thumb" title="%title%">%data%</a></span><p class="description">%description%</p></div>';
 var HTMLprojectImage = '<a href="%url%" target="_blank" title="%title%" class="fancybox-thumb" rel="fancybox-thumb"><img class="img-responsive portfolio-img" alt="portfolio pictures"src="%data%" ></a>';
 var HTMLlink='<a href="%url%" target="_blank"></a>';
-
+var HTMLprojectDates='<div class="dates">%data%</div>';
 var HTMLschoolStart = '<div class="education-entry col-md-6"></div>';
+var HTMLschoolStartDates='<div class="dates">%data%</div>';
 var HTMLschool='<div class="college text-center"><h3 class="academics text-uppercase text-center">Academics</h3></div>';
 var HTMLschoolName = '<div class="school-icon"></div><a href="#" class="school text-uppercase text-center" title="%title%">%data%</a>';
 var HTMLschoolDegree = ' <span class="degree text-uppercase">-- %data%</span>';

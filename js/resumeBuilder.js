@@ -1,21 +1,21 @@
 var bio = {
-    "name": "Nicki Chen",
-    "role": "Front-end Developer |" + " " + "UI Developer",
-    "contacts": [{
-        "facebook": "Facebook",
-        "twitter":"@nchenwebtech",
-        "email": "chenwebsolutions@gmail.com",
-        "github": "Github",
-        "location": "I Live in Dallas, TX",
-        "blog":"Nicki Chen Web Space",
-        "linkedin":"LinkedIn"
+    name: "Nicki Chen",
+    role: "Front-end Developer |" + " " + "UI Developer",
+    contacts: [{
+        facebook: "Facebook",
+        twitter:"@nchenwebtech",
+        email: "chenwebsolutions@gmail.com",
+        github: "Github",
+        location: "I Live in Dallas, TX",
+        blog:"Nicki Chen Web Space",
+        linkedin:"LinkedIn"
     }],
-    "welcomeMessage": "Howdy, I'm Nicki Chen ( @nchenwebtech) , I'm a front-end developer from Dallas, Texas. I solve things visually and love creating various things for the web. I love coding! ",
-    "skills": [
+    welcomeMessage: "Howdy, I'm Nicki Chen ( @nchenwebtech) , I'm a front-end developer from Dallas, Texas. I solve things visually and love creating various things for the web. I love coding! ",
+    skills: [
         "UX", "awesomeness", "WordPress development", "writing", "design"
     ],
-    "biopic": "images/self-small.jpg"
-}
+    biopic: "images/self-small.jpg"
+};
 bio.display = function() {
     var formattedName = HTMLheaderName.replace("%data%", bio.name);
     var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
@@ -25,8 +25,7 @@ bio.display = function() {
     $("#header").prepend(formattedRole);
     $("#header").prepend(formattedName);
     $("#header").prepend(formattedImage);
-    
-    for (var contact in bio.contacts) {
+    for (contact in bio.contacts) {
         var formattedFacebook = HTMLFacebook.replace("%data%", bio.contacts[contact].facebook);
         var formattedEmail = HTMLemail.replace("%data%", bio.contacts[contact].email);
         var formattedTwitter=HTMLtwitter.replace("%data%",bio.contacts[contact].twitter);
@@ -37,68 +36,68 @@ bio.display = function() {
         $("#footerContacts").append(formattedLocation,formattedEmail,formattedBlog);
         $("#rightContacts").append(formattedFacebook,formattedTwitter,formattedGithub,formattedLinkedin);
     }
-}
+};
 var education = {
-    "schools": [{
-        "name": "University of Texas at Arlington",
-        "location": "Arlington,TX",
-        "degree": "Bachelors",
-        "majors": "Psychology",
-        "month":"Dec",
-        "year":"2011",
-        "dates":"Dec,2011",
-        "url": "http://example.com"
+    schools: [{
+        name: "University of Texas at Arlington",
+        location: "Arlington,TX",
+        degree: "Bachelors",
+        majors: "Psychology",
+        month:"Dec",
+        year:"2011",
+        dates:"Dec,2011",
+        url: "http://example.com"
     }],
-    "onlineCourses": [{
-    	"title":"Intro to HTML and CSS",
-    	"school": "Udacity",
-    	"month":"Mar",
-    	"year":"2016",
-        "dates":"Mar, 2016",
-    	"url":"https://www.udacity.com/course/intro-to-html-and-css--ud304"
+    onlineCourses: [{
+        title:"Intro to HTML and CSS",
+        school: "Udacity",
+        month:"Mar",
+    	year:"2016",
+        dates:"Mar, 2016",
+    	url:"https://www.udacity.com/course/intro-to-html-and-css--ud304"
     },
     {
-    	"title":"How to use Git and Github",
-    	"school":"Udacity",
-    	"month":"Mar",
-    	"year":"2016",
-        "dates":"Mar,2016",
-    	"url":"https://www.udacity.com/course/how-to-use-git-and-github--ud775"
+    	title:"How to use Git and Github",
+    	school:"Udacity",
+    	month:"Mar",
+    	year:"2016",
+        dates:"Mar,2016",
+    	url:"https://www.udacity.com/course/how-to-use-git-and-github--ud775"
     },
     {
-    	"title": "Responsive Web Design Fundamentals",
-    	"school":"Udacity",
-    	"month":"Mar",
-    	"year":"2016",
-        "dates":"Mar,2016",
-    	"url":"https://www.udacity.com/course/responsive-web-design-fundamentals--ud893"
+    	title: "Responsive Web Design Fundamentals",
+    	school:"Udacity",
+    	month:"Mar",
+    	year:"2016",
+        dates:"Mar,2016",
+    	url:"https://www.udacity.com/course/responsive-web-design-fundamentals--ud893"
     },
     {
-    	"title":"Responsive Images",
-    	"school":"Udacity",
-    	"month":"Mar",
-    	"year":"2016",
-        "dates":"Mar,2016",
-    	"url":"https://www.udacity.com/course/responsive-images--ud882"
+    	title:"Responsive Images",
+    	school:"Udacity",
+    	month:"Mar",
+    	year:"2016",
+        dates:"Mar,2016",
+    	url:"https://www.udacity.com/course/responsive-images--ud882"
     },
     {
-        "title": "Javascript Crash Course",
-        "school": "Udacity",
-        "month": "Apr",
-        "year":"2016",
-        "dates":"Apr,2016",
-        "url": "https://www.udacity.com/course/javascript-basics--ud804"
+        title: "Javascript Crash Course",
+        school: "Udacity",
+        month: "Apr",
+        year:"2016",
+        dates:"Apr,2016",
+        url: "https://www.udacity.com/course/javascript-basics--ud804"
     },
     {
-    	"title":"Intro to jQuery",
-    	"school":"Udacity",
-    	"month":"Apr",
-    	"year":"2016",
-        "dates":"Apr,2016",
-    	"url":"https://www.udacity.com/course/intro-to-jquery--ud245"
+    	title:"Intro to jQuery",
+    	school:"Udacity",
+    	month:"Apr",
+    	year:"2016",
+        dates:"Apr,2016",
+    	url:"https://www.udacity.com/course/intro-to-jquery--ud245"
     }]
 
-}
+};
 education.display = function() {
 	if(education.schools.length>0) {
 	    for (var item in education.schools) {
@@ -129,47 +128,47 @@ education.display = function() {
 
     	}
     }
-}
+};
 
 var work = {
     "jobs": [
     {
-    	"employer":"100-Day-Code-Challenge",
-    	"title":"Web Developer in-training",
-    	"location":"Carrollton,TX",
-    	"month":"May",
-    	"year":"2014",
-        "dates":"May,2014",
-    	"description":"I coded daily web apps for a streak of 100 Days.",
+    	employer:"100-Day-Code-Challenge",
+    	title:"Web Developer in-training",
+    	location:"Carrollton,TX",
+    	month:"May",
+    	year:"2014",
+        dates:"May,2014",
+    	description:"I coded daily web apps for a streak of 100 Days.",
     	"images":["images/watches-small.png"],
     	"url":"images/watches-medium.png",
     	"link":"http://donutsbean.tumblr.com"
 
     },
     {
-        "employer": "NC Web Design",
-        "title": "UI Developer",
-		"location": "Carrollton,TX",
-        "month":"Dec",
-        "year":"2014",
-        "dates":"Dec,2014",
-        "description": "Develop and code anything with the web",
-        "images":["images/work-small.jpg"],
-        "url":"images/work-medium.jpg",
-        "link":"https://www.facebook.com/N-C-Web-Design-1374398246183996/"
+        employer: "NC Web Design",
+        title: "UI Developer",
+		location: "Carrollton,TX",
+        month:"Dec",
+        year:"2014",
+        dates:"Dec,2014",
+        description: "Develop and code anything with the web",
+        images:["images/work-small.jpg"],
+        url:"images/work-medium.jpg",
+        link:"https://www.facebook.com/N-C-Web-Design-1374398246183996/"
     },{
-    	"employer":"Bravelearner LLC",
-    	"title":"Social Media Specialist",
-    	"location":"Dallas,TX",
-    	"month":"May",
-    	"year":"2015",
-        "dates":"May,2015",
-    	"description":"Create weekly content and grphics on Facebook.",
-    	"images":["images/bravelearner-small.jpg"],
-    	"url":"images/bravelearner-medium.jpg",
-    	"link":"https://www.facebook.com/Brave-Learner-LLC-839328876174646/"
+    	employer:"Bravelearner LLC",
+    	title:"Social Media Specialist",
+    	location:"Dallas,TX",
+    	month:"May",
+    	year:"2015",
+        dates:"May,2015",
+    	description:"Create weekly content and grphics on Facebook.",
+    	images:["images/bravelearner-small.jpg"],
+    	url:"images/bravelearner-medium.jpg",
+    	link:"https://www.facebook.com/Brave-Learner-LLC-839328876174646/"
     }]
-}
+};
 
 var projects = {
     "projects": [
@@ -226,7 +225,7 @@ var projects = {
     	"images":["images/UI-kit-small.jpg"],
     	"url":"images/UI-kit-medium.jpg"
     }]
-}
+};
 projects.display = function() {
    if(!projects || !projects.projects){
 	return;
@@ -279,7 +278,7 @@ work.display = function() {
 	        .append(formattedImage);
     });
 
-}
+};
 
 function inName(name) {
     name = name.trim().split(" ");
@@ -342,7 +341,7 @@ function chartLabel(){
 	$(".skills-view").append(skillHTML);
 	}
 	
-}
+};
 window.onload=function(){
 	var ctx=document.getElementById("my-chart").getContext("2d");
 	window.myDoughnutChart=new Chart(ctx).Doughnut(pieData);

@@ -60,7 +60,7 @@ h1 {
   font-weight:100;
   color:#f6f1ed;
   font-size:6em;
-  
+
 }
 h2 {
   font-weight: bold;
@@ -312,7 +312,7 @@ ul {
 /* work */
 .work{
   background-color:rgba(117, 230, 209, 0.98);
-  
+
 }
 .work-entry .work-description{
   background:rgba(245, 211, 134, 0.94);
@@ -521,7 +521,7 @@ a.title{
 .major{
   margin-top:0;
   display: block;
-  
+
 }
 .online-entry{
   background-color:rgba(117, 230, 209, 0.98);
@@ -536,7 +536,7 @@ a.title{
   font-size:2.5em;
   letter-spacing:3px;
   font-style:normal;
-  
+
 }
 .academics{
   display:none;
@@ -588,7 +588,7 @@ a.title{
   -o-transition:color 0.4s ease-in-out;
 }
 .education .date-month,
-.education .date-year{  
+.education .date-year{
   top:-50px;
   left:-160px;
 }
@@ -601,10 +601,7 @@ a.title{
 
 /* Bar chart stuff */
 
-#skills-chart{
-  width:100%;
-  margin:0 auto;
-}
+
 #skills-display h2,
 #projects h2,
 #mapDiv h2{
@@ -622,7 +619,7 @@ a.title{
   font-weight:400;
 }
 .skills-view .red{
-  background-color:#ff9987; 
+  background-color:#ff9987;
 }
 .skills-view .green{
   background-color: #5AD3D1;
@@ -646,7 +643,11 @@ a.title{
   color: white;
   display: inline-block;
 }
-
+#my-chart{
+  display:none;
+  margin:0 auto;
+  width:200px;
+}
 span {
   padding: 5px;
 }
@@ -666,7 +667,7 @@ span {
   font-weight:800;
   font-size:4em;
   color:#b0a18e;
-  
+
 }
 #footerContacts,
 #rightContacts
@@ -816,9 +817,12 @@ a:-o-any_link{
 }
 
 @media only screen and (min-width: 750px) {
-  #skillsH3,
+  #skills h3,
   .biopic {
     display: block;
+  }
+  #my-chart{
+    display:block;
   }
 }
 @media only screen and (min-width:580px) and (max-width:900px){
@@ -828,7 +832,7 @@ a:-o-any_link{
   .education-entry .date-month,
   .education-entry .date-year{
     margin-top:30px;
-  } 
+  }
   .degree{
     margin-top:30px;
   }
@@ -865,14 +869,13 @@ a:-o-any_link{
     box-sizing:border-box;
     display:inline-block;
     text-align: center;
-    
+
   }
   .primary-nav ul li{
     margin-right:60px;
     display: inline-block;
-
   }
-  
+
   .academics{
     display:block;
   }
@@ -886,7 +889,7 @@ a:-o-any_link{
     float:right;
     height:100%;
   }
-  
+
   .skills-view .label{
     margin:10px;
     display:inline-block;

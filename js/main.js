@@ -32,12 +32,13 @@ $(".page-scroll").click(function(event){
 		scrollTop:$($anchor.attr("href")).offset().top
 	},1500,"easeInOutQuad");
 });
-// Karl Swedberg techniques for smooth scrolling 
+// Karl Swedberg techniques for smooth scrolling
 //smooth scrolling back to top functionality
 function scrollableElement(){
 	var i, len, el, $el, scrollable;
 	for (i = 0, len = arguments.length; i < len; i++ ){
 		el=arguments[i];
+		console.log(el);
 		$el=$(el);
 		if($el.scrollTop() > 0){
 			return el;
@@ -70,4 +71,3 @@ $(".scroll-up").each(function(){
 		},1500,"easeInOutQuad")
 	});
 });
-
